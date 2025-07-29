@@ -1,199 +1,196 @@
-  * {
-      box-sizing: border-box;
-    }
+* {
+  box-sizing: border-box;
+}
 
-    body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background: linear-gradient(135deg, #a1c4fd, #c2e9fb);
-height: 100%;
-min-height: 100vh;
-      color: #102a43;
-      transition: background 0.3s ease, color 0.3s ease;
-    }
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #a1c4fd, #c2e9fb);
+  height: 100%;
+  min-height: 100vh;
+  color: #102a43;
+  transition: background 0.3s ease, color 0.3s ease;
+}
 
-    .heading {
-      text-align: center;
-      font-size: 42px;
-      margin-top: 0px;
-      text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
-      background: linear-gradient(221deg, #135aff 0%, #09a286 100%);
-    color: #ffffff;
-    padding: 15px;
-    box-shadow: 20px 10px 20px 0px #ffffff;
-    }
+.heading {
+  text-align: center;
+  font-size: 42px;
+  margin-top: 0px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(221deg, #135aff 0%, #09a286 100%);
+  color: #ffffff;
+  padding: 15px;
+  box-shadow: 20px 10px 20px 0px #ffffff;
+}
 
-    .info-text {
-      text-align: center;
-      font-size: 16px;
-      color: #415a77;
-      margin-bottom: 20px;
-    }
+.info-text {
+  text-align: center;
+  font-size: 16px;
+  color: #415a77;
+  margin-bottom: 20px;
+}
 
-    .app {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 30px;
-      padding: 40px;
-      max-width: 1400px;
-      margin: auto;
-    }
+.app {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 30px;
+  padding: 40px;
+  max-width: 1400px;
+  margin: auto;
+}
 
-    .note-wrapper {
-      position: relative;
-      background: rgba(255, 255, 255, 0.2);
-      backdrop-filter: blur(12px);
-      border-radius: 20px;
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1),
-                  0 4px 6px rgba(0, 0, 0, 0.06),
-                  inset 0 0 10px rgba(255, 255, 255, 0.4);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      overflow: hidden;
-    }
+.note-wrapper {
+  position: relative;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 4px 6px rgba(0, 0, 0, 0.06),
+    inset 0 0 10px rgba(255, 255, 255, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
 
-    .note-wrapper:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15),
-                  0 8px 12px rgba(0, 0, 0, 0.08),
-                  inset 0 0 10px rgba(255, 255, 255, 0.5);
-    }
+.note-wrapper:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15), 0 8px 12px rgba(0, 0, 0, 0.08),
+    inset 0 0 10px rgba(255, 255, 255, 0.5);
+}
 
-    .note {
-      width: 100%;
-      padding: 20px;
-      resize: none;
-      border: none;
-      border-radius: 0 0 20px 20px;
-      height: 200px;
-      background: transparent;
-      font-size: 18px;
-      color: #102a43;
-      outline: none;
-      font-family: serif;
-      text-align: justify;
-    }
+.note {
+  width: 100%;
+  padding: 20px;
+  resize: none;
+  border: none;
+  border-radius: 0 0 20px 20px;
+  height: 200px;
+  background: transparent;
+  font-size: 18px;
+  color: #102a43;
+  outline: none;
+  font-family: serif;
+  text-align: justify;
+}
 
-    .note::placeholder {
-      color: #7b8fa1;
-      opacity: 0.5;
-    }
+.note::placeholder {
+  color: #7b8fa1;
+  opacity: 0.5;
+}
 
-    .close-btn {
-      position: absolute;
-      top: 10px;
-      right: 12px;
-      background: linear-gradient(145deg, #ff5f5f, #ff1f1f);
-      border: none;
-      border-radius: 50%;
-      color: white;
-      font-size: 14px;
-      font-weight: bold;
-      width: 26px;
-      height: 26px;
-      cursor: pointer;
-      z-index: 1;
-      transition: transform 0.2s ease;
-    }
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  background: linear-gradient(145deg, #ff5f5f, #ff1f1f);
+  border: none;
+  border-radius: 50%;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+  z-index: 1;
+  transition: transform 0.2s ease;
+}
 
-    .close-btn:hover {
-      transform: scale(1.1);
-    }
+.close-btn:hover {
+  transform: scale(1.1);
+}
 
-    .btn {
-      height: 250px;
-      border: none;
-      border-radius: 20px;
-      background: linear-gradient(135deg, #e0f7fa, #ffffff50);
-      backdrop-filter: blur(10px);
-      color: #00796b;
-      font-size: 60px;
-      font-weight: bold;
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-      cursor: pointer;
-      transition: transform 0.3s ease, background 0.3s ease;
-    }
+.btn {
+  height: 250px;
+  border: none;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #e0f7fa, #ffffff50);
+  backdrop-filter: blur(10px);
+  color: #00796b;
+  font-size: 60px;
+  font-weight: bold;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
 
-    .btn i {
-      transition: transform 0.3s ease;
-    }
+.btn i {
+  transition: transform 0.3s ease;
+}
 
-    .btn:hover {
-      background: linear-gradient(135deg, #b2ebf2, #ffffff80);
-      transform: scale(1.05);
-    }
+.btn:hover {
+  background: linear-gradient(135deg, #b2ebf2, #ffffff80);
+  transform: scale(1.05);
+}
 
-    .btn:hover i {
-      transform: rotate(90deg);
-    }
+.btn:hover i {
+  transform: rotate(90deg);
+}
 
-    #themeToggle {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      font-size: 22px;
-      background: none;
-      border: none;
-      cursor: pointer;
-      color: #333;
-      transition: color 0.3s ease;
-    }
+#themeToggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 22px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #333;
+  transition: color 0.3s ease;
+}
 
-    .toast {
-      position: fixed;
-      bottom: 30px;
-      left: 50%;
-      transform: translateX(-50%) scale(0.9);
-      background: rgba(0,0,0,0.8);
-      color: white;
-      padding: 10px 20px;
-      border-radius: 10px;
-      font-size: 14px;
-      opacity: 0;
-      transition: all 0.3s ease;
-      z-index: 9999;
-    }
+.toast {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%) scale(0.9);
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 14px;
+  opacity: 0;
+  transition: all 0.3s ease;
+  z-index: 9999;
+}
 
-    .toast.visible {
-      opacity: 1;
-      transform: translateX(-50%) scale(1);
-    }
+.toast.visible {
+  opacity: 1;
+  transform: translateX(-50%) scale(1);
+}
 
-    [data-theme="dark"] {
-      background: #121212;
-      color: #ffffff;
-    }
+[data-theme="dark"] {
+  background: #121212;
+  color: #ffffff;
+}
 
-    [data-theme="dark"] .note {
-      color: #ffffff;
-    }
+[data-theme="dark"] .note {
+  color: #ffffff;
+}
 
-    [data-theme="dark"] .note-wrapper {
-      background: rgba(255, 255, 255, 0.05);
-      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
-    }
+[data-theme="dark"] .note-wrapper {
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
 
-    [data-theme="dark"] .btn {
-      background: rgba(255, 255, 255, 0.08);
-      color: #ffffff;
-    }
+[data-theme="dark"] .btn {
+  background: rgba(255, 255, 255, 0.08);
+  color: #ffffff;
+}
 
-    [data-theme="dark"] .btn:hover {
-      background: rgba(255, 255, 255, 0.2);
-    }
+[data-theme="dark"] .btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
 
-    @media (max-width: 600px) {
-      .note {
-        font-size: 14px;
-      }
+@media (max-width: 600px) {
+  .note {
+    font-size: 14px;
+  }
 
-      .btn {
-        font-size: 50px;
-        height: 180px;
-      }
-    }
+  .btn {
+    font-size: 50px;
+    height: 180px;
+  }
+}
 
-
-    /* New: Styles for .head (heading input inside each note) */
+/* New: Styles for .head (heading input inside each note) */
 .head {
   width: 100%;
   padding: 15px 20px 10px;
@@ -203,7 +200,7 @@ min-height: 100vh;
   font-size: 20px;
   font-weight: bold;
   color: #102a43;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   outline: none;
   text-align: left;
 }

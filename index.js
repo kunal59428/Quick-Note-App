@@ -145,9 +145,10 @@ function showToast(message) {
 function setTheme(mode) {
   document.body.setAttribute("data-theme", mode);
   localStorage.setItem("theme", mode);
-  themeToggle.innerHTML = mode === "dark"
-    ? '<i class="fas fa-sun"></i>'
-    : '<i class="fas fa-moon"></i>';
+  themeToggle.innerHTML =
+    mode === "dark"
+      ? '<i class="fas fa-sun"></i>'
+      : '<i class="fas fa-moon"></i>';
 }
 
 themeToggle.addEventListener("click", () => {
